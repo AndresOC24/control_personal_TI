@@ -33,6 +33,15 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function registros()
+    {
+        return $this->hasMany(Registro::class);
+    }
+
+    public function horariosTrabajo()
+    {
+        return $this->hasMany(HorarioTrabajo::class);
+    }
     /**
      * Get the attributes that should be cast.
      *
